@@ -1,0 +1,254 @@
+{
+	"info": {
+		"_postman_id": "c9016775-e87e-4f3b-bc22-88b660abc97d",
+		"name": "Code Grapics",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "pass@1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "sultan53",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY1ODE0MDU1MSwianRpIjoiYTVjNWVhZjgtNDgyMy00NGJhLThhYTEtZDdkNmYxODRjNDA2IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IntcImNoZWNrX3Bhc3N3b3JkXCI6IG51bGwsIFwiZmluZF9ieV9pZFwiOiBudWxsLCBcImZpbmRfYnlfdXNlcm5hbWVcIjogbnVsbCwgXCJpZFwiOiAxLCBcInBhc3N3b3JkXCI6IFwiYWJjZFwiLCBcInF1ZXJ5XCI6IG51bGwsIFwicXVlcnlfY2xhc3NcIjogbnVsbCwgXCJyZWdpc3RyeVwiOiBudWxsLCBcInNhdmVfdG9fZGJcIjogbnVsbCwgXCJ1c2VybmFtZVwiOiBcInVzZXIxXCJ9IiwibmJmIjoxNjU4MTQwNTUxLCJleHAiOjE2NTgxNDE0NTF9.Gm2qu06y-nj_npJ8z_HvLICrelUEWa3yjXglfsyJEfg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create_user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "tanveersultan@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "sultan53",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "pass@1234",
+							"type": "text"
+						},
+						{
+							"key": "first_name",
+							"value": "Muhammad Tanveer",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "Sultan",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/add_user",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"add_user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "job posting",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-access-tokens",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwdWJsaWNfaWQiOiJkMWI1ZmU5Ni0wNzA0LTQ1ZDYtYTZmMy0zZWZjZmY3MDk4MGEiLCJleHAiOjE2NTgxNTI1NTZ9.VggGYDLeSDy3xhnY38vw0GxK_oCr2RKoSUGCH36b1Bo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"job_title\":\"Test12\",\n\"job_description\":\"test\",\n\"job_rate\":10,\n\"latitude\":\"fasd\",\n\"longitude\":\"ads\",\n\"user_id\":2,\n\"is_active\":1\n}\n   ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/job-list",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"job-list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "job-list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/job-list",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"job-list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get job",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/JobItem/7",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"JobItem",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete job.",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "update job.",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-access-tokens",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwdWJsaWNfaWQiOiJkMWI1ZmU5Ni0wNzA0LTQ1ZDYtYTZmMy0zZWZjZmY3MDk4MGEiLCJleHAiOjE2NTgxNzQwMjR9.Obiuh-CRqksT8lkw2Oq_aWhWM3Yhlf_vaWPMQGIxRHU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"job_title\":\"Test1223\"\n}\n   ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/JobItem/7",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"JobItem",
+						"7"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
